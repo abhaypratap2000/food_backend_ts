@@ -11,9 +11,9 @@ interface VendorDoc extends Document {
     email:string;
     salt:string;
     serviceAvailable:boolean;
-    coverImages:[string];
+    coverImages:string[];
     rating:number;
-    // foods:any;
+    foods:any;
 }
 
 
@@ -30,10 +30,10 @@ const VandorSchema = new Schema({
     serviceAvailable:{type:Boolean},
     coverImages:{type:[String]},
     rating:{type:Number},
-    // foods:[{
-    //     type:mongoose.SchemaTypes.ObjectId,
-    //     ref:"food"
-    // }]
+    foods:[{
+        type:mongoose.SchemaTypes.ObjectId,
+        ref:"food"
+    }]
 
 
 },{ 
